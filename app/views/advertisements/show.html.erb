@@ -1,0 +1,6 @@
+<h1><%= @advertisement.title %></h1>
+<p><%= @advertisement.body %></p>
+<p>Posted by: <%= @advertisement.user.email %></p>
+
+<%= link_to 'Edit', edit_advertisement_path(@advertisement), class: 'btn btn-secondary' %> |
+<%= link_to 'Back', advertisements_path, class: 'btn btn-primary' %>

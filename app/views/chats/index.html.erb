@@ -1,0 +1,13 @@
+<h1>All Chats</h1>
+<%= link_to 'New Chat', new_chat_path, class: 'btn btn-primary' %>
+
+<ul>
+  <% @chats.each do |chat| %>
+    <li>
+      <%= link_to chat.title, chat_path(chat) %>
+      <% if chat.post %>
+        <p>Related to post: <%= link_to chat.post.title, post_path(chat.post) %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

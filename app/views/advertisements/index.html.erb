@@ -1,0 +1,11 @@
+<h1>Advertisements</h1>
+
+<% @advertisements.each do |advertisement| %>
+  <div class="advertisement">
+    <h2><%= link_to advertisement.title, advertisement_path(advertisement) %></h2>
+    <p><%= advertisement.body %></p>
+    <p>Posted by: <%= advertisement.user.email %></p>
+  </div>
+<% end %>
+
+<%= link_to 'New Advertisement', new_advertisement_path, class: 'btn btn-primary' %>
